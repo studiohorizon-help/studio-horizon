@@ -26,9 +26,9 @@
     .section { padding: 7rem 0; }
     .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 3rem; }
     h1, h2, h3, p { margin-top: 0; }
-    h1, h2, h3 { font-family: var(--serif); letter-spacing: -.045em; line-height: 1.05; }
-    h1 { max-width: 8ch; margin: 1rem 0 1.5rem; font-size: clamp(3.8rem, 9vw, 7.6rem); }
-    h2 { max-width: 10ch; margin-bottom: 0; font-size: clamp(2.6rem, 5vw, 4.5rem); }
+    h1, h2, h3 { font-family: var(--serif); letter-spacing: -.045em; line-height: 1.15; word-break: keep-all; overflow-wrap: break-word; }
+    h1 { margin: 1rem 0 1.5rem; font-size: clamp(2.5rem, 6vw, 5.5rem); }
+    h2 { max-width: 12em; margin-bottom: 0; font-size: clamp(2.2rem, 5vw, 4.5rem); }
     h3 { margin-bottom: .7rem; font-size: 1.35rem; }
     .nav { position: sticky; top: 0; z-index: 10; padding: .75rem 0; background: rgba(245,243,239,.86); border-bottom: 1px solid rgba(20,27,45,.08); backdrop-filter: blur(14px); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; }
@@ -103,7 +103,7 @@
     .step p { margin: 0; color: var(--muted); }
     .contact { padding-bottom: 8rem; }
     .contact-panel { display: grid; grid-template-columns: .9fr 1.1fr; gap: 4rem; padding: 3rem; border-radius: var(--radius); background: var(--coral); }
-    .contact-panel h2 { max-width: 8ch; }
+    .contact-panel h2 { max-width: none; }
     .contact-panel > div > p { max-width: 20rem; color: #4d2530; }
     .contact-form { display: grid; gap: 1rem; }
     .field { display: grid; gap: .4rem; }
