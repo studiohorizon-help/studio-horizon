@@ -31,3 +31,20 @@
         if (event.matches) closeMenu();
       });
     })();
+
+    (() => {
+      const phoneConsent = document.querySelector('#phone-consent');
+      const phoneInput = document.querySelector('#phone');
+
+      if (!phoneConsent || !phoneInput) return;
+
+      // Disabled fields are excluded from submission when optional consent is absent.
+      const updatePhoneAvailability = () => {
+        phoneInput.disabled = !phoneConsent.checked;
+        if (!phoneConsent.checked) phoneInput.value = '';
+      };
+
+      phoneConsent.addEventListener('change', updatePhoneAvailability);
+      window.addEventListener('pageshow', updatePhoneAvailability);
+      updatePhoneAvailability();
+    })();

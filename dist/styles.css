@@ -111,6 +111,21 @@
     .field input, .field textarea { width: 100%; border: 1px solid rgba(20,27,45,.3); border-radius: .65rem; padding: .85rem 1rem; background: rgba(255,255,255,.65); color: var(--ink); outline: none; }
     .field input:focus, .field textarea:focus { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(20,27,45,.12); }
     .field textarea { min-height: 7rem; resize: vertical; }
+    .field-help { margin: 0; font-size: .85rem; color: #4d2530; word-break: keep-all; }
+    .field input:disabled { background: rgba(255,255,255,.35); cursor: not-allowed; }
+    .privacy-notice { min-width: 0; margin: .5rem 0 0; padding: 1rem; border: 1px solid rgba(20,27,45,.35); border-radius: .65rem; background: rgba(255,255,255,.6); font-size: .85rem; line-height: 1.65; }
+    .privacy-notice legend { padding: 0 .3rem; font-weight: 700; }
+    .privacy-details { margin: 0 0 1rem; }
+    .privacy-details div + div { margin-top: .65rem; }
+    .privacy-details dt { font-weight: 700; }
+    .privacy-details dd { margin: 0; }
+    .privacy-notice p { margin: .75rem 0; }
+    .privacy-notice p:last-child { margin-bottom: 0; }
+    .privacy-notice a { text-decoration: underline; overflow-wrap: anywhere; }
+    .consent-option { display: flex; align-items: flex-start; gap: .6rem; cursor: pointer; }
+    .consent-option input { flex: 0 0 auto; width: 1.15rem; height: 1.15rem; margin: .2rem 0 0; accent-color: var(--ink); }
+    .consent-option span { min-width: 0; }
+    .optional-consent { margin-top: 1rem; padding-top: .25rem; border-top: 1px solid rgba(20,27,45,.25); }
     .form-button { justify-self: start; border: 0; background: var(--ink); cursor: pointer; }
     .form-status { min-height: 1.5rem; margin: 0; font-size: .9rem; font-weight: 700; }
     footer { padding: 1.6rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }

@@ -203,6 +203,7 @@
             method="POST" aria-describedby="contact-note">
             <input type="hidden" name="_subject" value="Studio Horizon 홈페이지 문의">
             <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="privacy_notice_version" value="2026-10-14">
             <div class="field">
               <label for="name">이름</label>
               <input id="name" name="name" type="text" placeholder="홍길동" autocomplete="name" required>
@@ -212,13 +213,41 @@
               <input id="email" name="email" type="email" placeholder="hello@example.com" autocomplete="email" required>
             </div>
             <div class="field">
-              <label for="phone">연락처</label>
-              <input id="phone" name="phone" type="tel" placeholder="010-1234-5678" autocomplete="tel" required>
+              <label for="phone">전화번호 (선택)</label>
+              <input id="phone" name="phone" type="tel" placeholder="010-1234-5678" autocomplete="tel"
+                aria-describedby="phone-help" disabled>
+              <p class="field-help" id="phone-help">전화 상담을 원하시면 아래 선택 동의에 체크해 주세요. 전화번호 없이도 문의할 수 있습니다.</p>
             </div>
             <div class="field">
               <label for="message">프로젝트 한 줄 소개</label>
               <textarea id="message" name="message" placeholder="만들고 싶은 웹사이트를 소개해주세요." required></textarea>
             </div>
+            <fieldset class="privacy-notice" aria-describedby="privacy-rights privacy-route">
+              <legend>문의 개인정보 수집·이용 안내</legend>
+              <p>스튜디오호라이즌은 문의 답변과 견적 안내를 위해 개인정보를 수집·이용합니다.</p>
+              <dl class="privacy-details">
+                <div><dt>목적</dt><dd>문의 답변 및 견적 안내. 마케팅에 사용하지 않습니다.</dd></div>
+                <div><dt>필수 항목</dt><dd>이름, 이메일, 프로젝트 소개</dd></div>
+                <div><dt>보유기간</dt><dd>계약으로 이어지지 않은 문의는 상담 종료 안내일로부터 30일까지 보관한 뒤 삭제합니다.</dd></div>
+              </dl>
+              <p id="privacy-rights">동의를 거부할 수 있습니다. 필수 항목 수집·이용에 동의하지 않으면 이 문의 폼을 이용할 수 없습니다.</p>
+              <label class="consent-option" for="privacy-consent">
+                <input id="privacy-consent" name="privacy_consent" type="checkbox" value="agreed" required>
+                <span>[필수] 개인정보 수집·이용에 동의합니다.</span>
+              </label>
+              <div class="optional-consent">
+                <p id="phone-consent-details">선택 항목은 전화번호이며, 전화 상담 및 문의 관련 연락에 사용합니다. 미계약 문의의 보유기간은 상담 종료 안내일로부터 30일까지입니다. 동의하지 않거나 전화번호를 입력하지 않아도 이메일로 문의할 수 있습니다.</p>
+                <label class="consent-option" for="phone-consent">
+                  <input id="phone-consent" name="phone_consent" type="checkbox" value="agreed"
+                    aria-describedby="phone-consent-details">
+                  <span>[선택] 전화번호 수집·이용에 동의합니다.</span>
+                </label>
+              </div>
+              <p id="privacy-route">문의는 FormSubmit을 통해 회사 메일함으로 전달됩니다.</p>
+              <p>개인정보 담당: 대표 Son</p>
+              <p>개인정보 관련 문의: <a href="mailto:studiohorizon.help@gmail.com">studiohorizon.help@gmail.com</a></p>
+              <noscript><p>전화번호 선택 입력은 JavaScript가 켜져 있을 때 사용할 수 있습니다. 이메일 문의는 가능합니다.</p></noscript>
+            </fieldset>
             <button class="button form-button" type="submit">문의 보내기 <span aria-hidden="true">↗</span></button>
           </form>
         </div>
