@@ -114,7 +114,8 @@
     .field-help { margin: 0; font-size: .85rem; color: #4d2530; word-break: keep-all; }
     .field input:disabled { background: rgba(255,255,255,.35); cursor: not-allowed; }
     .privacy-notice { min-width: 0; margin: .5rem 0 0; padding: 1rem; border: 1px solid rgba(20,27,45,.35); border-radius: .65rem; background: rgba(255,255,255,.6); font-size: .85rem; line-height: 1.65; }
-    .privacy-notice legend { padding: 0 .3rem; font-weight: 700; }
+    .privacy-notice legend { float: left; width: 100%; padding: 0rem; margin-bottom: .75rem; font-weight: 700; }
+    .privacy-notice legend + p { clear: both;}
     .privacy-details { margin: 0 0 1rem; }
     .privacy-details div + div { margin-top: .65rem; }
     .privacy-details dt { font-weight: 700; }
