@@ -85,3 +85,12 @@ body.chat-is-open{overflow:hidden}
 }
 @media(prefers-reduced-motion:reduce){.site-chat *{transition:none!important}}
 @media print{.site-chat,.site-chat-launcher,.outline-button{display:none!important}}
+
+/* Keep the floating launcher separate from the hero action on narrow screens. */
+.chat-launcher-compact{display:none}
+@media screen and (max-width:380px){
+ .site-chat-launcher{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;min-height:52px;padding:0;font-size:14px;line-height:1.2}
+ .site-chat-launcher .chat-launcher-full{display:none}
+ .site-chat-launcher .chat-launcher-compact{display:block}
+ .hero .actions .button{max-width:min(100%,calc(100vw - 120px))}
+}
